@@ -1,0 +1,108 @@
+<div>
+    <h1 style="color: #166987;font-size: 36px;  font-family: DiavloLight, Arial, sans-serif;">{{title}}</h1>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Họ và Tên</label>
+            <input ng-model="inputValue.name" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <p ng-if="checkedData.name==true" style="color: rgb(185, 53, 53);">Vui lòng nhập tên</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Căn cước công dân</label>
+            <input ng-model="inputValue.ID" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <p ng-if="checkedData.ID==true" style="color: rgb(185, 53, 53);">Căn cước công dân không hợp lệ</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input ng-model="inputValue.email" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <p ng-if="checkedData.email==true" style="color: rgb(185, 53, 53);">Email không hợp lệ</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Giới tính</label>
+            <div class="form-check">
+                <input ng-model="inputValue.gender" value="Nam" class="form-check-input" type="radio"
+                    name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Nam
+                </label>
+            </div>
+            <div class="form-check">
+                <input ng-model="inputValue.gender" value="Nữ" class="form-check-input" type="radio"
+                    name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Nữ
+                </label>
+            </div>
+            <p ng-if="checkedData.gender==true" style="color: rgb(185, 53, 53);">Vui lòng chọn giới tính</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Số điện thoại</label>
+            <input ng-model="inputValue.numberPhone" type="tel" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <p ng-if="checkedData.numberPhone==true" style="color: rgb(185, 53, 53);">Số điện thoại không hợp lệ</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Chọn chuyến bay</label>
+            <select ng-model="inputValue.flight" class="form-select" aria-label="Default select example">
+                <option selected>--Chọn--</option>
+                <option value="Hài Nội - Hải Phòng">Hà Nội - Hải Phòng</option>
+                <option value="Hà Nội - TP.Hồ Chí Minh">Hà Nội - TP.Hồ Chí Minh</option>
+                <option value="Đà Nẵng - Phú Quốc">Đà Nẵng - Phú Quốc</option>
+            </select>
+            <p ng-if="checkedData.flight==true" style="color: rgb(185, 53, 53);">Vui lòng chọn chuyến bay</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Hành lý</label>
+            <input ng-model="inputValue.luggage" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <p ng-if="checkedData.luggage==true" style="color: rgb(185, 53, 53);">Vui lòng không bỏ trống nhập hành lý
+            </p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Hình thức thanh toán</label>
+            <select ng-model="inputValue.formsOfPayment" class="form-select" aria-label="Default select example">
+                <option selected>--Chọn--</option>
+                <option value="Tiền mặt">Tiền mặt</option>
+                <option value="Chuyển khoản">Chuyển khoản</option>
+                <option value="Nợ">Nợ</option>
+            </select>
+            <p ng-if="checkedData.formsOfPayment==true" style="color: rgb(185, 53, 53);">Vui lòng chọn hình thức thanh
+                toán</p>
+        </div>
+
+        <button ng-click="save()" type="submit" class="btn btn-primary">Đặt vé</button>
+
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Căn cước công dân</th>
+                <th scope="col">Email</th>
+                <th scope="col">Giới tính</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Chuyến bay</th>
+                <th scope="col">Hành lý</th>
+                <th scope="col">Hình thức thanh toán</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="ds in booking">
+                <th scope="row">{{ds.id}}</th>
+                <td>{{ds.name}}</td>
+                <td>{{ds.ID}}</td>
+                <td>{{ds.email}}</td>
+                <td>{{ds.gender}}</td>
+                <td>{{ds.phone}}</td>
+                <td>{{ds.flight}}</td>
+                <td>{{ds.luggage}}</td>
+                <td>{{ds.pay}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

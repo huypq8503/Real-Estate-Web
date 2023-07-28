@@ -1,55 +1,26 @@
 {
-  "users": [
+  "booking": [
     {
+      "id": 1,
       "name": "Phạm Quang Huy",
+      "ID": "0123456789",
+      "email": "huypqph27947@fpt.edu.vn",
       "gender": "Nam",
-      "age": 20,
-      "money": 1080000,
-      "date": "2003",
-      "day": "12",
-      "rank": "2",
-      "genderValue": "1",
-      "id": 1
+      "phone": "0981969927",
+      "flight": "Hà Nội - Hải Phòng",
+      "luggage": "Ký gửi",
+      "pay": "Nợ"
     },
     {
-      "name": "Phạm Quang Dũng",
+      "name": "phamquanghuy8503@gmail",
+      "ID": "12435254",
+      "email": "phamquanghuy8503@gmail.com",
       "gender": "Nam",
-      "age": 22,
-      "money": 180000,
-      "date": "2001",
-      "day": "2",
-      "rank": "2",
-      "genderValue": "1",
+      "phone": "09819824",
+      "flight": "1",
+      "luggage": "123",
+      "pay": "Tiền mặt",
       "id": 2
-    },
-    {
-      "name": "Phạm Việt Đức",
-      "gender": "Nữ",
-      "age": 22,
-      "money": 120000,
-      "date": "2001",
-      "day": "1",
-      "rank": "Chọn Cấp Bậc",
-      "genderValue": "2",
-      "id": 3
-    },
-    {
-      "name": "Nguyễn Tân Dũng",
-      "gender": "Nữ",
-      "age": 2022,
-      "money": 120000,
-      "date": "1",
-      "day": "1",
-      "rank": "Chọn Cấp Bậc",
-      "genderValue": "2",
-      "id": 4
-    }
-  ],
-  "ranks": [
-    {
-      "rank1": 70000,
-      "rank2": 90000,
-      "rank3": 120000
     }
   ]
 }

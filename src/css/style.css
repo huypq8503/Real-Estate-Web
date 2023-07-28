@@ -1,0 +1,29 @@
+.nav-link {
+    font-family: urw-din, Arial, sans-serif;
+    color: #00305B;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+.card {
+    margin: 20px;
+    padding: 0;
+    height: 20rem;
+}
+
+.card img {
+    height: 10rem;
+}
+
+.card-pa {
+    max-height: 120px;
+    box-shadow: 5px 5px #4d4c4c34;
+}
+
+.card-pa:hover {
+    background-color: #F8F3E7;
+}
