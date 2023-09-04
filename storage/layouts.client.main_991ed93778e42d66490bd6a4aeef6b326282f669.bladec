@@ -1,0 +1,7 @@
+<?php echo $this->runChild('layouts.client.header'); ?>
+<?php echo $this->runChild('layouts.client.thongBao'); ?>
+<?php echo $this->runChild('layouts.client.header_top'); ?>
+<?php echo $this->yieldContent('content'); ?>
+<?php echo $this->runChild('layouts.client.footer'); ?>
+<?php echo $this->runChild('layouts.client.footer_product'); ?>
+<?php echo $this->runChild('layouts.client.footer_link'); ?>

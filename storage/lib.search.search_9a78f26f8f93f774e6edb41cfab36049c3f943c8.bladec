@@ -1,0 +1,9 @@
+<!--Search Start-->
+<div>
+ <form action="index.php?url=tim_kiem_loai" method="post">
+ <div class="input-group mb-3 w-50">
+ <?php echo $this->yieldContent('a'); ?>
+ </div>
+ </form>
+</div>
+<!--Search End-->
